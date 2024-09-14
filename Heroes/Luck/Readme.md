@@ -38,3 +38,6 @@
 
 3d10r<1 : Rolls 3d10, and then rerolls every result smaller or equal to 1 and computes the sum.
 - [1,8,9] => [6,8,9] => 23
+
+## TODO
+ - {1,56,98} : draws one of these numbers. Initialisation operator.

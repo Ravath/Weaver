@@ -3,10 +3,10 @@
 // (see accompanying GPPGcopyright.rtf)
 
 // GPPG version 1.5.2
-// Machine:  EHLION-GTX
-// DateTime: 03/10/2018 00:59:10
-// UserName: Ehlion
-// Input file <RollParser.y - 03/10/2018 00:59:02>
+// Machine:  FUKUROU
+// DateTime: 2024/09/13 22:28:08
+// UserName: rvi
+// Input file <RollParser.y - 2024/09/13 22:26:39>
 
 // options: lines
 
@@ -32,11 +32,11 @@ internal partial struct ValueType
 [GeneratedCodeAttribute( "Gardens Point Parser Generator", "1.5.2")]
 internal partial class Parser: ShiftReduceParser<ValueType, LexLocation>
 {
-  // Verbatim content from RollParser.y - 03/10/2018 00:59:02
+  // Verbatim content from RollParser.y - 2024/09/13 22:26:39
 #line 10 "RollParser.y"
 	public IRoll result;
 #line default
-  // End verbatim content from RollParser.y - 03/10/2018 00:59:02
+  // End verbatim content from RollParser.y - 2024/09/13 22:26:39
 
 #pragma warning disable 649
   private static Dictionary<int, string> aliases;

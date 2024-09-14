@@ -12,8 +12,8 @@
 
 %start MAIN
 %partial
-%namespace Weaver.Heroes.Dice.Parser
-%using Weaver.Heroes.Module.Value
+%namespace Weaver.Heroes.Luck.Parser
+%using Weaver.Heroes.Body.Value
 %visibility internal
 
 %union {
@@ -39,8 +39,8 @@ NUMBER
 	;
 OPERATION
 	: NUMBER { $$ = new Intervalle($1, $1); }
-	| NUMBER ':' NUMBER { $$ = new Intervalle(new ValueModule2<int>("", $1), new ValueModule2<int>("", $3)); }
-	| NUMBER 'd' NUMBER { $$ = new Pool(new ValueModule2<int>("", $1), $3); }
+	| NUMBER ':' NUMBER { $$ = new Intervalle(new ValueModule<int>("", $1), new ValueModule<int>("", $3)); }
+	| NUMBER 'd' NUMBER { $$ = new Pool(new ValueModule<int>("", $1), $3); }
 	| OPERATION '>' '=' NUMBER { $$ = new KeepHigherThan($1, $4); }
 	| OPERATION '<' '=' NUMBER { $$ = new KeepLowerThan($1, $4); }
 	| OPERATION '>' NUMBER { $$ = new KeepHigherThan($1, $3+1); }

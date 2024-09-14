@@ -2,3 +2,20 @@ bin/
 obj/
 Debug/
 Release/
+
+# Mono-specific ignores
+.vscode/
+.mono/
+Release/
+Debug/
+data_*/
+.vs
+*.pdb
+*.dll
+
+
+
+**/Parser/*.lst
+**/Parser/*.html
+**/Math/*.lst
+**/Math/*.html

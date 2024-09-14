@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Heroes\Destiny\" />
     <Folder Include="Horizon\" />
     <Folder Include="Whisper\" />
   </ItemGroup>
