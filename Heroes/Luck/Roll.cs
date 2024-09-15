@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
@@ -132,6 +133,15 @@ namespace Weaver.Heroes.Luck {
 				macro = m.Value;
 			}
 			return value;
+		}
+
+		public static int RollMacro(string macro)
+		{
+			Debug.Assert(macro != null);
+			IRoll r = Parse(macro);
+			Debug.Assert(r != null);
+			r.Roll();
+			return r.NetResult;
 		}
 	}
 }

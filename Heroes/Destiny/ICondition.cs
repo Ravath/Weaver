@@ -7,6 +7,7 @@ namespace Weaver.Heroes.Destiny;
 public interface ICondition
 {
     bool IsTrue{ get; }
+    string ToMacro();
 }
 
 public class Flag : ICondition
@@ -16,6 +17,11 @@ public class Flag : ICondition
     public Flag(bool isTrue = true)
     {
         IsTrue = isTrue;
+    }
+    
+    public string ToMacro()
+    {
+        return IsTrue.ToString();
     }
 }
 
@@ -28,6 +34,11 @@ public class Not : ICondition
     {
         Cond = cond;
     }
+    
+    public string ToMacro()
+    {
+        return "!" + Cond.ToString();
+    }
 }
 
 public class RefCondition : ICondition
@@ -38,6 +49,11 @@ public class RefCondition : ICondition
     public RefCondition(ICondition cond)
     {
         Cond = cond;
+    }
+
+    public string ToMacro()
+    {
+        return Cond.ToMacro();
     }
 }
 
@@ -62,7 +78,7 @@ public abstract class LogicOperator : ICondition
     public abstract bool Operator(ICondition left, ICondition right);
     public abstract string OperatorString { get; }
 
-    public override string ToString()
+    public string ToMacro()
     {
         Debug.Assert(Left != null);
         Debug.Assert(Right != null);
@@ -92,7 +108,7 @@ public abstract class ComparisonOperator<T> : ICondition where T : IComparable<T
     public abstract bool Operator(T left, T right);
     public abstract string OperatorString { get; }
 
-    public override string ToString()
+    public string ToMacro()
     {
         Debug.Assert(Left != null);
         Debug.Assert(Right != null);

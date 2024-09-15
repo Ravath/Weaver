@@ -12,11 +12,11 @@
  - V != V
 
 ### Notations
-A,B as : logic operations
-V as :
- - Positive int values
- - Negative int values
- - A module path
+ - A,B as : logic operations
+ - V as :
+   - Positive int values
+   - Negative int values
+   - A module path
 
 ### Precautions
  -> Do not use spaces
@@ -26,5 +26,5 @@ V as :
  - Bool Values  (Module)
  - Float Values (numeric and module alike)
  - Contains operations :
-  - String[] module contains 'expr'
-  - Int[]    module contains 'int'
+   - String[] module contains 'expr'
+   - Int[]    module contains 'int'

@@ -20,6 +20,16 @@ public class Module
     /// </summary>
     [JsonIgnore]
     public string ModuleName { get; private set; }
+
+    /// <summary>
+    /// The name of the Module and its parents.
+    /// </summary>
+    [JsonIgnore]
+    public string FullModuleName { get {
+        if(Parent == null)
+            return ModuleName;
+        return Parent.FullModuleName + "." + ModuleName;
+    } }
     /// <summary>
     /// The module's parent in the arborescence.
     /// </summary>
@@ -36,12 +46,13 @@ public class Module
     /// </summary>
     /// <param name="na"></param>
     /// <exception cref="ArgumentException"></exception>
-    public void Register(Module na)
+    public Module Register(Module na)
     {
         if(_submodules.ContainsKey(na.ModuleName))
             throw new ArgumentException(na.ModuleName + " is already registered");
         _submodules.Add(na.ModuleName, na);
         na.Parent = this;
+        return na;
     }
 
     /// <summary>
@@ -88,6 +99,8 @@ public class Module
     {
         // Find in arborescence
         string[] path = fullpath.Split('.');
+        if(path[0] == ModuleName)
+            path = path[1..];
         Module current = this;
         foreach (string attname in path)
         {
@@ -104,6 +117,28 @@ public class Module
             throw new ArgumentException(string.Format("Can't find {0} of type {1}.",
                 fullpath,
                 current?.GetType().ToString() ?? "Not found"));
+        }
+    }
+
+    /// <summary>
+    /// Unregister every children.
+    /// </summary>
+    public void UnregisterAll()
+    {
+        foreach(Module child in _submodules.Values.ToList())
+        {
+            Unregister(child);
+        }
+    }
+
+    public IEnumerable<T> GetChildren<T>() where T : Module
+    {
+        foreach (Module child in _submodules.Values) {
+            if(child is T tc)
+                yield return tc;
+            foreach (T sub in child.GetChildren<T>()) {
+                yield return sub;
+            }
         }
     }
 }
