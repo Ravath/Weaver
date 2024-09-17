@@ -4,9 +4,9 @@
 
 // GPPG version 1.5.2
 // Machine:  FUKUROU
-// DateTime: 2024/09/14 18:57:59
+// DateTime: 2024/09/17 15:24:46
 // UserName: rvi
-// Input file <ConditionParser.y - 2024/09/14 18:56:54>
+// Input file <ConditionParser.y - 2024/09/17 15:24:39>
 
 // options: lines
 
@@ -17,6 +17,7 @@ using System.Globalization;
 using System.Text;
 using QUT.Gppg;
 using Weaver.Heroes.Body.Value;
+using Weaver.Heroes.Luck;
 
 namespace Weaver.Heroes.Destiny.Parser
 {
@@ -24,11 +25,12 @@ internal enum Tokens {error=126,
     EOF=127,DIGIT=128,CHAR=129};
 
 internal partial struct ValueType
-#line 20 "ConditionParser.y"
+#line 21 "ConditionParser.y"
        {
 	public int iVal;
 	public char cVal;
 	public string sVal;
+	public IRoll iRoll;
 	public ComparableReference<int> iTerm;
 	public ICondition iCond;
 }
@@ -36,38 +38,39 @@ internal partial struct ValueType
 [GeneratedCodeAttribute( "Gardens Point Parser Generator", "1.5.2")]
 internal partial class Parser: ShiftReduceParser<ValueType, LexLocation>
 {
-  // Verbatim content from ConditionParser.y - 2024/09/14 18:56:54
+  // Verbatim content from ConditionParser.y - 2024/09/17 15:24:39
 #line 10 "ConditionParser.y"
 	public ICondition result;
 	public ModuleReference modRef = new ModuleReference(null);
 #line default
-  // End verbatim content from ConditionParser.y - 2024/09/14 18:56:54
+  // End verbatim content from ConditionParser.y - 2024/09/17 15:24:39
 
 #pragma warning disable 649
   private static Dictionary<int, string> aliases;
 #pragma warning restore 649
-  private static Rule[] rules = new Rule[24];
-  private static State[] states = new State[43];
+  private static Rule[] rules = new Rule[32];
+  private static State[] states = new State[53];
   private static string[] nonTerms = new string[] {
-      "MAIN", "NUMBER", "PATH", "TERMINAL", "OPERATION", "$accept", };
+      "MAIN", "NUMBER", "PATH", "MACRO", "TERMINAL", "OPERATION", "$accept", 
+      };
 
   static Parser() {
-    states[0] = new State(new int[]{128,18,45,19,129,26,33,38,40,40,127,-2,126,-2},new int[]{-1,1,-5,5,-4,12,-2,16,-3,21});
+    states[0] = new State(new int[]{128,18,45,19,129,26,91,27,33,48,40,50,127,-2,126,-2},new int[]{-1,1,-6,5,-5,12,-2,16,-3,21});
     states[1] = new State(new int[]{127,2,126,3});
     states[2] = new State(-1);
     states[3] = new State(new int[]{10,4});
     states[4] = new State(-4);
     states[5] = new State(new int[]{124,6,38,9,127,-3,126,-3});
     states[6] = new State(new int[]{124,7});
-    states[7] = new State(new int[]{128,18,45,19,129,26,33,38,40,40},new int[]{-5,8,-4,12,-2,16,-3,21});
-    states[8] = new State(new int[]{124,6,38,9,127,-22,126,-22,41,-22});
+    states[7] = new State(new int[]{128,18,45,19,129,26,91,27,33,48,40,50},new int[]{-6,8,-5,12,-2,16,-3,21});
+    states[8] = new State(new int[]{124,6,38,9,127,-30,126,-30,41,-30});
     states[9] = new State(new int[]{38,10});
-    states[10] = new State(new int[]{128,18,45,19,129,26,33,38,40,40},new int[]{-5,11,-4,12,-2,16,-3,21});
-    states[11] = new State(new int[]{124,6,38,9,127,-23,126,-23,41,-23});
-    states[12] = new State(new int[]{61,13,33,27,62,30,60,34});
+    states[10] = new State(new int[]{128,18,45,19,129,26,91,27,33,48,40,50},new int[]{-6,11,-5,12,-2,16,-3,21});
+    states[11] = new State(new int[]{124,6,38,9,127,-31,126,-31,41,-31});
+    states[12] = new State(new int[]{61,13,33,37,62,40,60,44});
     states[13] = new State(new int[]{61,14});
-    states[14] = new State(new int[]{128,18,45,19,129,26},new int[]{-4,15,-2,16,-3,21});
-    states[15] = new State(-14);
+    states[14] = new State(new int[]{128,18,45,19,129,26,91,27},new int[]{-5,15,-2,16,-3,21});
+    states[15] = new State(-22);
     states[16] = new State(new int[]{128,17,61,-11,33,-11,62,-11,60,-11,124,-11,38,-11,127,-11,126,-11,41,-11});
     states[17] = new State(-10);
     states[18] = new State(-9);
@@ -79,28 +82,38 @@ internal partial class Parser: ShiftReduceParser<ValueType, LexLocation>
     states[24] = new State(new int[]{129,25});
     states[25] = new State(-8);
     states[26] = new State(-5);
-    states[27] = new State(new int[]{61,28});
-    states[28] = new State(new int[]{128,18,45,19,129,26},new int[]{-4,29,-2,16,-3,21});
-    states[29] = new State(-15);
-    states[30] = new State(new int[]{61,31,128,18,45,19,129,26},new int[]{-4,33,-2,16,-3,21});
-    states[31] = new State(new int[]{128,18,45,19,129,26},new int[]{-4,32,-2,16,-3,21});
-    states[32] = new State(-16);
-    states[33] = new State(-18);
-    states[34] = new State(new int[]{61,35,128,18,45,19,129,26},new int[]{-4,37,-2,16,-3,21});
-    states[35] = new State(new int[]{128,18,45,19,129,26},new int[]{-4,36,-2,16,-3,21});
-    states[36] = new State(-17);
-    states[37] = new State(-19);
-    states[38] = new State(new int[]{128,18,45,19,129,26,33,38,40,40},new int[]{-5,39,-4,12,-2,16,-3,21});
-    states[39] = new State(new int[]{124,6,38,9,127,-20,126,-20,41,-20});
-    states[40] = new State(new int[]{128,18,45,19,129,26,33,38,40,40},new int[]{-5,41,-4,12,-2,16,-3,21});
-    states[41] = new State(new int[]{41,42,124,6,38,9});
-    states[42] = new State(-21);
+    states[27] = new State(new int[]{128,36},new int[]{-4,28});
+    states[28] = new State(new int[]{93,29,129,30,128,31,62,32,60,33,61,34,33,35});
+    states[29] = new State(-14);
+    states[30] = new State(-16);
+    states[31] = new State(-17);
+    states[32] = new State(-18);
+    states[33] = new State(-19);
+    states[34] = new State(-20);
+    states[35] = new State(-21);
+    states[36] = new State(-15);
+    states[37] = new State(new int[]{61,38});
+    states[38] = new State(new int[]{128,18,45,19,129,26,91,27},new int[]{-5,39,-2,16,-3,21});
+    states[39] = new State(-23);
+    states[40] = new State(new int[]{61,41,128,18,45,19,129,26,91,27},new int[]{-5,43,-2,16,-3,21});
+    states[41] = new State(new int[]{128,18,45,19,129,26,91,27},new int[]{-5,42,-2,16,-3,21});
+    states[42] = new State(-24);
+    states[43] = new State(-26);
+    states[44] = new State(new int[]{61,45,128,18,45,19,129,26,91,27},new int[]{-5,47,-2,16,-3,21});
+    states[45] = new State(new int[]{128,18,45,19,129,26,91,27},new int[]{-5,46,-2,16,-3,21});
+    states[46] = new State(-25);
+    states[47] = new State(-27);
+    states[48] = new State(new int[]{128,18,45,19,129,26,91,27,33,48,40,50},new int[]{-6,49,-5,12,-2,16,-3,21});
+    states[49] = new State(new int[]{124,6,38,9,127,-28,126,-28,41,-28});
+    states[50] = new State(new int[]{128,18,45,19,129,26,91,27,33,48,40,50},new int[]{-6,51,-5,12,-2,16,-3,21});
+    states[51] = new State(new int[]{41,52,124,6,38,9});
+    states[52] = new State(-29);
 
     for (int sNo = 0; sNo < states.Length; sNo++) states[sNo].number = sNo;
 
-    rules[1] = new Rule(-6, new int[]{-1,127});
+    rules[1] = new Rule(-7, new int[]{-1,127});
     rules[2] = new Rule(-1, new int[]{});
-    rules[3] = new Rule(-1, new int[]{-5});
+    rules[3] = new Rule(-1, new int[]{-6});
     rules[4] = new Rule(-1, new int[]{-1,126,10});
     rules[5] = new Rule(-3, new int[]{129});
     rules[6] = new Rule(-3, new int[]{-3,129});
@@ -108,19 +121,27 @@ internal partial class Parser: ShiftReduceParser<ValueType, LexLocation>
     rules[8] = new Rule(-3, new int[]{-3,46,129});
     rules[9] = new Rule(-2, new int[]{128});
     rules[10] = new Rule(-2, new int[]{-2,128});
-    rules[11] = new Rule(-4, new int[]{-2});
-    rules[12] = new Rule(-4, new int[]{45,-2});
-    rules[13] = new Rule(-4, new int[]{-3});
-    rules[14] = new Rule(-5, new int[]{-4,61,61,-4});
-    rules[15] = new Rule(-5, new int[]{-4,33,61,-4});
-    rules[16] = new Rule(-5, new int[]{-4,62,61,-4});
-    rules[17] = new Rule(-5, new int[]{-4,60,61,-4});
-    rules[18] = new Rule(-5, new int[]{-4,62,-4});
-    rules[19] = new Rule(-5, new int[]{-4,60,-4});
-    rules[20] = new Rule(-5, new int[]{33,-5});
-    rules[21] = new Rule(-5, new int[]{40,-5,41});
-    rules[22] = new Rule(-5, new int[]{-5,124,124,-5});
-    rules[23] = new Rule(-5, new int[]{-5,38,38,-5});
+    rules[11] = new Rule(-5, new int[]{-2});
+    rules[12] = new Rule(-5, new int[]{45,-2});
+    rules[13] = new Rule(-5, new int[]{-3});
+    rules[14] = new Rule(-5, new int[]{91,-4,93});
+    rules[15] = new Rule(-4, new int[]{128});
+    rules[16] = new Rule(-4, new int[]{-4,129});
+    rules[17] = new Rule(-4, new int[]{-4,128});
+    rules[18] = new Rule(-4, new int[]{-4,62});
+    rules[19] = new Rule(-4, new int[]{-4,60});
+    rules[20] = new Rule(-4, new int[]{-4,61});
+    rules[21] = new Rule(-4, new int[]{-4,33});
+    rules[22] = new Rule(-6, new int[]{-5,61,61,-5});
+    rules[23] = new Rule(-6, new int[]{-5,33,61,-5});
+    rules[24] = new Rule(-6, new int[]{-5,62,61,-5});
+    rules[25] = new Rule(-6, new int[]{-5,60,61,-5});
+    rules[26] = new Rule(-6, new int[]{-5,62,-5});
+    rules[27] = new Rule(-6, new int[]{-5,60,-5});
+    rules[28] = new Rule(-6, new int[]{33,-6});
+    rules[29] = new Rule(-6, new int[]{40,-6,41});
+    rules[30] = new Rule(-6, new int[]{-6,124,124,-6});
+    rules[31] = new Rule(-6, new int[]{-6,38,38,-6});
   }
 
   protected override void Initialize() {
@@ -136,107 +157,147 @@ internal partial class Parser: ShiftReduceParser<ValueType, LexLocation>
     switch (action)
     {
       case 3: // MAIN -> OPERATION
-#line 39 "ConditionParser.y"
+#line 42 "ConditionParser.y"
                { result = ValueStack[ValueStack.Depth-1].iCond; }
 #line default
         break;
       case 4: // MAIN -> MAIN, error, '\n'
-#line 40 "ConditionParser.y"
+#line 43 "ConditionParser.y"
                      { yyerrok(); }
 #line default
         break;
       case 5: // PATH -> CHAR
-#line 44 "ConditionParser.y"
+#line 47 "ConditionParser.y"
         { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-1].sVal; }
 #line default
         break;
       case 6: // PATH -> PATH, CHAR
-#line 45 "ConditionParser.y"
+#line 48 "ConditionParser.y"
              { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-2].sVal + ValueStack[ValueStack.Depth-1].sVal; }
 #line default
         break;
       case 7: // PATH -> PATH, DIGIT
-#line 46 "ConditionParser.y"
+#line 49 "ConditionParser.y"
               { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-2].sVal + ValueStack[ValueStack.Depth-1].iVal; }
 #line default
         break;
       case 8: // PATH -> PATH, '.', CHAR
-#line 47 "ConditionParser.y"
+#line 50 "ConditionParser.y"
                  { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-3].sVal + "." + ValueStack[ValueStack.Depth-1].sVal; }
 #line default
         break;
       case 9: // NUMBER -> DIGIT
-#line 50 "ConditionParser.y"
+#line 53 "ConditionParser.y"
          { CurrentSemanticValue.iVal = ValueStack[ValueStack.Depth-1].iVal; }
 #line default
         break;
       case 10: // NUMBER -> NUMBER, DIGIT
-#line 51 "ConditionParser.y"
+#line 54 "ConditionParser.y"
                 { CurrentSemanticValue.iVal = ValueStack[ValueStack.Depth-2].iVal * 10 + ValueStack[ValueStack.Depth-1].iVal; }
 #line default
         break;
       case 11: // TERMINAL -> NUMBER
-#line 54 "ConditionParser.y"
+#line 57 "ConditionParser.y"
           { CurrentSemanticValue.iTerm = new PrimitiveReader<int>(ValueStack[ValueStack.Depth-1].iVal); }
 #line default
         break;
       case 12: // TERMINAL -> '-', NUMBER
-#line 55 "ConditionParser.y"
+#line 58 "ConditionParser.y"
               { CurrentSemanticValue.iTerm = new PrimitiveReader<int>(-1 * ValueStack[ValueStack.Depth-1].iVal); }
 #line default
         break;
       case 13: // TERMINAL -> PATH
-#line 56 "ConditionParser.y"
+#line 59 "ConditionParser.y"
         { CurrentSemanticValue.iTerm = new ValueModuleReader<int>(modRef, ValueStack[ValueStack.Depth-1].sVal); }
 #line default
         break;
-      case 14: // OPERATION -> TERMINAL, '=', '=', TERMINAL
-#line 59 "ConditionParser.y"
+      case 14: // TERMINAL -> '[', MACRO, ']'
+#line 60 "ConditionParser.y"
+                 { CurrentSemanticValue.iTerm = new RollReader(Roll.Parse(ValueStack[ValueStack.Depth-2].sVal)); }
+#line default
+        break;
+      case 15: // MACRO -> DIGIT
+#line 63 "ConditionParser.y"
+         { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-1].iVal.ToString(); }
+#line default
+        break;
+      case 16: // MACRO -> MACRO, CHAR
+#line 64 "ConditionParser.y"
+              { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-2].sVal + ValueStack[ValueStack.Depth-1].sVal; }
+#line default
+        break;
+      case 17: // MACRO -> MACRO, DIGIT
+#line 65 "ConditionParser.y"
+               { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-2].sVal + ValueStack[ValueStack.Depth-1].iVal; }
+#line default
+        break;
+      case 18: // MACRO -> MACRO, '>'
+#line 66 "ConditionParser.y"
+             { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-2].sVal + ValueStack[ValueStack.Depth-1]; }
+#line default
+        break;
+      case 19: // MACRO -> MACRO, '<'
+#line 67 "ConditionParser.y"
+             { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-2].sVal + ValueStack[ValueStack.Depth-1]; }
+#line default
+        break;
+      case 20: // MACRO -> MACRO, '='
+#line 68 "ConditionParser.y"
+             { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-2].sVal + ValueStack[ValueStack.Depth-1]; }
+#line default
+        break;
+      case 21: // MACRO -> MACRO, '!'
+#line 69 "ConditionParser.y"
+             { CurrentSemanticValue.sVal = ValueStack[ValueStack.Depth-2].sVal + ValueStack[ValueStack.Depth-1]; }
+#line default
+        break;
+      case 22: // OPERATION -> TERMINAL, '=', '=', TERMINAL
+#line 72 "ConditionParser.y"
                              { CurrentSemanticValue.iCond = new Equality<int>(ValueStack[ValueStack.Depth-4].iTerm, ValueStack[ValueStack.Depth-1].iTerm); }
 #line default
         break;
-      case 15: // OPERATION -> TERMINAL, '!', '=', TERMINAL
-#line 60 "ConditionParser.y"
+      case 23: // OPERATION -> TERMINAL, '!', '=', TERMINAL
+#line 73 "ConditionParser.y"
                              { CurrentSemanticValue.iCond = new Inequality<int>(ValueStack[ValueStack.Depth-4].iTerm, ValueStack[ValueStack.Depth-1].iTerm); }
 #line default
         break;
-      case 16: // OPERATION -> TERMINAL, '>', '=', TERMINAL
-#line 61 "ConditionParser.y"
+      case 24: // OPERATION -> TERMINAL, '>', '=', TERMINAL
+#line 74 "ConditionParser.y"
                              { CurrentSemanticValue.iCond = new GreaterOrEqual<int>(ValueStack[ValueStack.Depth-4].iTerm, ValueStack[ValueStack.Depth-1].iTerm); }
 #line default
         break;
-      case 17: // OPERATION -> TERMINAL, '<', '=', TERMINAL
-#line 62 "ConditionParser.y"
+      case 25: // OPERATION -> TERMINAL, '<', '=', TERMINAL
+#line 75 "ConditionParser.y"
                              { CurrentSemanticValue.iCond = new LowerOrEqual<int>(ValueStack[ValueStack.Depth-4].iTerm, ValueStack[ValueStack.Depth-1].iTerm); }
 #line default
         break;
-      case 18: // OPERATION -> TERMINAL, '>', TERMINAL
-#line 63 "ConditionParser.y"
+      case 26: // OPERATION -> TERMINAL, '>', TERMINAL
+#line 76 "ConditionParser.y"
                          { CurrentSemanticValue.iCond = new Greater<int>(ValueStack[ValueStack.Depth-3].iTerm, ValueStack[ValueStack.Depth-1].iTerm); }
 #line default
         break;
-      case 19: // OPERATION -> TERMINAL, '<', TERMINAL
-#line 64 "ConditionParser.y"
+      case 27: // OPERATION -> TERMINAL, '<', TERMINAL
+#line 77 "ConditionParser.y"
                          { CurrentSemanticValue.iCond = new Lower<int>(ValueStack[ValueStack.Depth-3].iTerm, ValueStack[ValueStack.Depth-1].iTerm); }
 #line default
         break;
-      case 20: // OPERATION -> '!', OPERATION
-#line 65 "ConditionParser.y"
+      case 28: // OPERATION -> '!', OPERATION
+#line 78 "ConditionParser.y"
                      { CurrentSemanticValue.iCond = new Not(ValueStack[ValueStack.Depth-1].iCond); }
 #line default
         break;
-      case 21: // OPERATION -> '(', OPERATION, ')'
-#line 66 "ConditionParser.y"
+      case 29: // OPERATION -> '(', OPERATION, ')'
+#line 79 "ConditionParser.y"
                      { CurrentSemanticValue.iCond = new RefCondition(ValueStack[ValueStack.Depth-2].iCond); }
 #line default
         break;
-      case 22: // OPERATION -> OPERATION, '|', '|', OPERATION
-#line 67 "ConditionParser.y"
+      case 30: // OPERATION -> OPERATION, '|', '|', OPERATION
+#line 80 "ConditionParser.y"
                                { CurrentSemanticValue.iCond = new Or(ValueStack[ValueStack.Depth-4].iCond, ValueStack[ValueStack.Depth-1].iCond); }
 #line default
         break;
-      case 23: // OPERATION -> OPERATION, '&', '&', OPERATION
-#line 68 "ConditionParser.y"
+      case 31: // OPERATION -> OPERATION, '&', '&', OPERATION
+#line 81 "ConditionParser.y"
                                { CurrentSemanticValue.iCond = new And(ValueStack[ValueStack.Depth-4].iCond, ValueStack[ValueStack.Depth-1].iCond); }
 #line default
         break;

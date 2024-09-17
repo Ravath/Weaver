@@ -15,12 +15,14 @@
 %partial
 %namespace Weaver.Heroes.Destiny.Parser
 %using Weaver.Heroes.Body.Value
+%using Weaver.Heroes.Luck;
 %visibility internal
 
 %union {
 	public int iVal;
 	public char cVal;
 	public string sVal;
+	public IRoll iRoll;
 	public ComparableReference<int> iTerm;
 	public ICondition iCond;
 }
@@ -29,6 +31,7 @@
 %token <sVal> CHAR
 %type <iVal> NUMBER
 %type <sVal> PATH
+%type <sVal> MACRO
 %type <iTerm> TERMINAL
 %type <iCond> OPERATION
 
@@ -54,6 +57,16 @@ TERMINAL
 	: NUMBER { $$ = new PrimitiveReader<int>($1); }
 	| '-' NUMBER { $$ = new PrimitiveReader<int>(-1 * $2); }
 	| PATH { $$ = new ValueModuleReader<int>(modRef, $1); }
+	| '[' MACRO ']' { $$ = new RollReader(Roll.Parse($2)); }
+	;
+MACRO
+	: DIGIT { $$ = $1.ToString(); }
+	| MACRO CHAR { $$ = $1 + $2; }
+	| MACRO DIGIT { $$ = $1 + $2; }
+	| MACRO '>' { $$ = $1 + $2; }
+	| MACRO '<' { $$ = $1 + $2; }
+	| MACRO '=' { $$ = $1 + $2; }
+	| MACRO '!' { $$ = $1 + $2; }
 	;
 OPERATION
 	: TERMINAL '=' '=' TERMINAL { $$ = new Equality<int>($1, $4); }
