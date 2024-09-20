@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Weaver.Heroes.Body.Value;
 
 namespace Weaver.Heroes.Body;
 
@@ -13,6 +14,9 @@ namespace Weaver.Heroes.Body;
 /// </summary>
 public class Module
 {
+    public event Action<Module> OnRegisteredModule;
+    public event Action<Module> OnUnregisteredModule;
+
     private Dictionary<string, Module> _submodules = new();
 
     /// <summary>
@@ -52,6 +56,8 @@ public class Module
             throw new ArgumentException(na.ModuleName + " is already registered");
         _submodules.Add(na.ModuleName, na);
         na.Parent = this;
+        OnRegisteredModule?.Invoke(na);
+        na.OnRegisteredModule += OnRegisteredModule;
         return na;
     }
 
@@ -66,6 +72,8 @@ public class Module
             throw new ArgumentException(na.ModuleName + " is not registered");
         _submodules.Remove(na.ModuleName);
         na.Parent = null;
+        OnUnregisteredModule?.Invoke(na);
+        na.OnRegisteredModule -= OnRegisteredModule;
     }
 
     /// <summary>
@@ -77,6 +85,10 @@ public class Module
     {
         return _submodules.ContainsKey(moduleName);
     }
+    public virtual bool HasRegistered(Module module)
+    {
+        return _submodules.ContainsKey(module.ModuleName);
+    }
 
     /// <summary>
     /// Get the direct child module with the given name.
@@ -86,6 +98,16 @@ public class Module
     public virtual Module GetRegistered(string moduleName)
     {
         return _submodules[moduleName];
+    }
+
+    /// <summary>
+    /// Get the direct child module with the given name.
+    /// </summary>
+    /// <param name="moduleName">A module name.</param>
+    /// <returns>A module.</returns>
+    public virtual T GetRegistered<T>(string moduleName) where T : Module
+    {
+        return (T)_submodules[moduleName];
     }
 
     /// <summary>
@@ -118,6 +140,21 @@ public class Module
                 fullpath,
                 current?.GetType().ToString() ?? "Not found"));
         }
+    }
+
+    public ValueModule<T> CreateValueModuleIfNotExist<T>(string modulePath, T initVal) {
+        string[] path = modulePath.Split('.');
+        string lastModuleName = path[^1];
+        
+        Module m = GetRegisteredByPath<Module>(string.Join(".", path[0..^1]));
+        
+        if(!m.HasRegistered(lastModuleName))
+        {
+            ValueModule<T> vali = new(lastModuleName, initVal);
+            m.Register(vali);
+            return vali;
+        }
+        return m.GetRegistered<ValueModule<T>>(lastModuleName);
     }
 
     /// <summary>

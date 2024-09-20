@@ -14,9 +14,10 @@
 ### Notations
  - A,B as : logic operations
  - V as :
-   - Positive int values
-   - Negative int values
+   - (-V)
+   - A int value
    - A module path
+   - A mathematical operation (+-*/)
 
 ### Precautions
  -> Do not use spaces

@@ -95,6 +95,8 @@ public abstract class ComparisonOperator<T> : ICondition where T : IComparable<T
 
     public ComparisonOperator( ComparableReference<T> left, ComparableReference<T> right )
     {
+        Debug.Assert(left != null);
+        Debug.Assert(right != null);
         RefLeft = left;
         RefRight = right;
     }
@@ -110,8 +112,6 @@ public abstract class ComparisonOperator<T> : ICondition where T : IComparable<T
 
     public string ToMacro()
     {
-        Debug.Assert(Left != null);
-        Debug.Assert(Right != null);
         return string.Format("{0}{1}{2}", Left.ToString(), OperatorString, Right.ToString());
     }
 }
