@@ -57,7 +57,7 @@ public class RollReader : ComparableReference<int>
 
     public override string ToMacro()
     {
-        return string.Format("[{0}]", Roll.ToMacro());
+        return string.Format("[{0} ({1})]", Roll.ToMacro(), Roll.NetResult);
     }
 }
 
@@ -80,7 +80,7 @@ public class ValueModuleReader<T> : ComparableReference<T> where T : IComparable
     
     public override string ToMacro()
     {
-        return string.Format("{0}({1})", ModulePath, Ref.Module.GetRegisteredByPath<IValue<T>>(ModulePath).Value);
+        return string.Format("{0} ({1})", ModulePath, Value);
     }
 }
 

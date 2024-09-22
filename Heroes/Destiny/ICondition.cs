@@ -37,7 +37,7 @@ public class Not : ICondition
     
     public string ToMacro()
     {
-        return "!" + Cond.ToString();
+        return "!" + Cond.ToMacro();
     }
 }
 
@@ -82,7 +82,7 @@ public abstract class LogicOperator : ICondition
     {
         Debug.Assert(Left != null);
         Debug.Assert(Right != null);
-        return string.Format("{0}{1}{2}", Left.ToString(), OperatorString, Left.ToString());
+        return string.Format("{0}{1}{2}", Left.ToMacro(), OperatorString, Left.ToMacro());
     }
 }
 
@@ -112,6 +112,6 @@ public abstract class ComparisonOperator<T> : ICondition where T : IComparable<T
 
     public string ToMacro()
     {
-        return string.Format("{0}{1}{2}", Left.ToString(), OperatorString, Right.ToString());
+        return string.Format("{0}{1}{2}", RefLeft.ToMacro(), OperatorString, RefRight.ToMacro());
     }
 }

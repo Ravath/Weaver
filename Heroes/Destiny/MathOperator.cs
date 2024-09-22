@@ -21,7 +21,7 @@ public abstract class MathOperator<T> : ComparableReference<T> where T : ICompar
 
     public override string ToMacro()
     {
-        return string.Format("{0}{1}{2}", Op1.ToString(), OperatorString, Op2.ToString());
+        return string.Format("{0}{1}{2}", Op1.ToMacro(), OperatorString, Op2.ToMacro());
     }
 }
 

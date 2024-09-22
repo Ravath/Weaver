@@ -69,7 +69,7 @@ public class Module
     public void Unregister(Module na)
     {
         if(!_submodules.ContainsKey(na.ModuleName))
-            throw new ArgumentException(na.ModuleName + " is not registered");
+            throw new ArgumentException("UNREGISTER : " + na.ModuleName + " is not registered");
         _submodules.Remove(na.ModuleName);
         na.Parent = null;
         OnUnregisteredModule?.Invoke(na);
@@ -111,16 +111,38 @@ public class Module
     }
 
     /// <summary>
+    /// Check if the module contains a indirect child with the given path.
+    /// </summary>
+    /// <param name="moduleName">A module path.</param>
+    /// <returns>True if found.</returns>
+    public virtual bool HasRegisteredByPath(string modulePath)
+    {
+        // Find in arborescence
+        string[] path = modulePath.Split('.');
+        if(path[0] == ModuleName)
+            path = path[1..];
+        Module current = this;
+        foreach (string attname in path)
+        {
+            if (!current.HasRegistered(attname))
+                return false;
+            current = current.GetRegistered(attname);
+        }
+
+        return true;
+    }
+
+    /// <summary>
     /// Use a namepath to get a module among the subarborescence of modules.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    /// <param name="fullpath"></param>
+    /// <param name="modulePath"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentException"></exception>
-    public T GetRegisteredByPath<T>(string fullpath)
+    public T GetRegisteredByPath<T>(string modulePath)
     {
         // Find in arborescence
-        string[] path = fullpath.Split('.');
+        string[] path = modulePath.Split('.');
         if(path[0] == ModuleName)
             path = path[1..];
         Module current = this;
@@ -137,7 +159,7 @@ public class Module
         else
         {
             throw new ArgumentException(string.Format("Can't find {0} of type {1}.",
-                fullpath,
+                modulePath,
                 current?.GetType().ToString() ?? "Not found"));
         }
     }
