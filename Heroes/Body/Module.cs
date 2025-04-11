@@ -139,7 +139,7 @@ public class Module
     /// <param name="modulePath"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentException"></exception>
-    public T GetRegisteredByPath<T>(string modulePath)
+    public T GetRegisteredByPath<T>(string modulePath) where T : Module
     {
         // Find in arborescence
         string[] path = modulePath.Split('.');

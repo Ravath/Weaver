@@ -68,7 +68,7 @@ public class ValueModuleReader<T> : ComparableReference<T> where T : IComparable
 
     public override T Value { 
         get{
-            return Ref.Module.GetRegisteredByPath<IValue<T>>(ModulePath).Value; 
+            return ((IValue < T > )Ref.Module.GetRegisteredByPath<Module>(ModulePath)).Value; 
         }
     }
 
