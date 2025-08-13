@@ -2,22 +2,28 @@ using System;
 
 namespace Weaver.Tales;
 
+/// <summary>
+/// A choice the user has to make to continue the story.
+/// </summary>
 public interface IStoryChoice
 {
     /// <summary>
-    /// If no text, just "Continue".
+    /// The choice to display.
+    /// <remarks>If no text, it is meant to mean "Continue", generaly done when there are no other alternatives.</remarks>
     /// </summary>
     public string Text { get; }
     /// <summary>
-    /// Not Null.
+    /// The reference to the next story paragraph resulting from this choice.
     /// </summary>
+    /// <remarks>Not Null.</remarks>
     public StoryParagraph Next { get; }
 }
 
 public class StoryChoice : IStoryChoice
 {
     /// <summary>
-    /// If no text, just "Continue".
+    /// The choice to display.
+    /// <remarks>If no text, it is meant to mean "Continue", generaly done when there are no other alternatives.</remarks>
     /// </summary>
     public string Text { get; set; }
     /// <summary>
@@ -25,8 +31,9 @@ public class StoryChoice : IStoryChoice
     /// </summary>
     public string Label { get; set; }
     /// <summary>
-    /// Not Null.
+    /// The reference to the next story paragraph resulting from this choice.
     /// </summary>
+    /// <remarks>Not Null.</remarks>
     public StoryParagraph Next { get; set; }
 }
 
@@ -34,9 +41,16 @@ public interface IStoryParagraphProvider {
     StoryParagraph GetNextStoryChoice(IStoryChoice choice);
 }
 
+/// <summary>
+/// A choice made automatically by the system, as implemented.
+/// The result is delegated to a 'provider'.
+/// </summary>
 public class ComputedStoryChoice : IStoryChoice
 {
-    IStoryParagraphProvider _provider;
+    /// <summary>
+    /// Delegate resolving the story choice.
+    /// </summary>
+    readonly IStoryParagraphProvider _provider;
 
     public ComputedStoryChoice(IStoryParagraphProvider provider, string text = "")
     {
@@ -45,7 +59,8 @@ public class ComputedStoryChoice : IStoryChoice
     }
 
     /// <summary>
-    /// If no text, just "Continue".
+    /// The choice to display.
+    /// <remarks>If no text, it is meant to mean "Continue", generaly done when there are no other alternatives.</remarks>
     /// </summary>
     public string Text { get; set; }
 

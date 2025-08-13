@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Weaver.Tales.Story">
+    <Position X="1.5" Y="0.75" Width="1.75" />
+    <Members>
+      <Field Name="_paragraphs" Hidden="true" />
+      <Field Name="_paragraphsIndex" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Paragraphs" Type="Weaver.Tales.StoryParagraph">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-2.45" Y="1.016" Height="0.182" Width="3.473" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAgAAAACAAAAAQAAAAgAAQAAAABAAAACAA=</HashCode>
+      <FileName>Tales\Story.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_paragraphsIndex" />
+      <Field Name="_paragraphs" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Paragraphs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Weaver.Tales.StoryChoice" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Tales\StoryChoice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Tales.ComputedStoryChoice" BaseTypeListCollapsed="true">
+    <Position X="10" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Tales\StoryChoice.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_provider" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Tales.StoryParagraph">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <AssociationLine Name="PostEffects" Type="Weaver.Tales.IStoryEffect">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.456" Y="0.433" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAABAAABAQBAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Tales\StoryParagraph.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Choices" />
+      <Property Name="Effects" />
+      <Property Name="PostEffects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="Weaver.Tales.IStoryEffect">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tales\IStoryEffect.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Tales.IStoryChoice">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Tales\StoryChoice.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Next" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Weaver.Tales.IStoryParagraphProvider">
+    <Position X="10" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tales\StoryChoice.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
