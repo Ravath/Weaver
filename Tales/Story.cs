@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace Weaver.Tales;
 
@@ -59,5 +61,21 @@ public class Story
     public StoryParagraph GetChunk(string id)
     {
         return _paragraphsIndex[id];
+    }
+
+    [OnDeserialized]
+    internal void OnDeserializedMethod(StreamingContext context)
+    {
+        foreach (StoryParagraph paragraph in _paragraphs)
+        {
+            _paragraphsIndex[paragraph.Label] = paragraph;
+        }
+        foreach (StoryParagraph paragraph in _paragraphs)
+        {
+            foreach(StoryChoice choice in paragraph.Choices)
+            {
+                choice.Next = _paragraphsIndex[choice.Label];
+            }
+        }
     }
 }

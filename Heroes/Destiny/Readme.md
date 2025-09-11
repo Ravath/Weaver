@@ -26,6 +26,7 @@
  - Bool Values  ('True' and 'False')
  - Bool Values  (Module)
  - Float Values (numeric and module alike)
+ - "String" Values
  - Contains operations :
    - String[] module contains 'expr'
    - Int[]    module contains 'int'

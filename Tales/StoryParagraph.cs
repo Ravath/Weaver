@@ -28,15 +28,15 @@ public class StoryParagraph
     /// <summary>
     /// The list of choices that can be made from this paragraph.
     /// </summary>
-    public List<IStoryChoice> Choices { get; } = new List<IStoryChoice>();
+    public List<IStoryChoice> Choices { get; set; } = new List<IStoryChoice>();
 
     /// <summary>
-    /// The list of effects to apply when this paragraph is enacted.
+    /// The list of effects applied when this paragraph is enacted.
     /// </summary>
-    public List<IStoryEffect> Effects { get; } = new List<IStoryEffect>();
+    public List<IStoryEffect> Effects { get; set; } = new List<IStoryEffect>();
 
     /// <summary>
-    /// The list of effects applys when a choice has been made and a next paragraph will be enacted.
+    /// The list of effects applied when a choice has been made and a next paragraph will be enacted.
     /// </summary>
-    public List<IStoryEffect> PostEffects { get; } = new List<IStoryEffect>();
+    public List<IStoryEffect> PostEffects { get; set; } = new List<IStoryEffect>();
 }

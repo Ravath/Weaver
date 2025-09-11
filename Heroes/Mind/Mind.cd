@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Weaver.Heroes.Mind.ActionModule" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAQAAACAQEAAAAAAAAAAIAAAAAAAAAEAAgAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\ActionModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Mind.AgentModule" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAEBIAAAQIAAHAAAAAZIAAAABAAQAAAAlAAgAEI=</HashCode>
+      <FileName>Heroes\Mind\AgentModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Mind.AlterationStateModule" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\AlterationStateModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Mind.Combat" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAQAAAAIAgIAAAABBAAAQAgAAgEAAIAAAAAEAQA=</HashCode>
+      <FileName>Heroes\Mind\Combat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Mind.CombatTimer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABAAAAIAAAAAAQgAABAASAAAAAAAAAAiAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\CombatTimer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Mind.Player" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Mind.SkillModule" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\SkillModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Mind.XPModule">
+    <Position X="14.75" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAgAAEAABgAEAAAAAAAAAAAAAEAAAAAAAAAAAhA=</HashCode>
+      <FileName>Heroes\Mind\XPModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Module" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAwAAAAAAAAAAFAAQAIAAAABQAACABYgAAAAEAA=</HashCode>
+      <FileName>Heroes\Body\Module.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Weaver.Heroes.Mind.ICombatStepListener" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAIAAAAAAQAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\ICombatStepListener.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Mind.IRollInitiative" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Heroes\Mind\IRollInitiative.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Mind.ITargetable" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\ITarget.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Mind.ITargeting" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAQAAACAQAAAAAAAAAAAIAAAAAAAAAEAAgAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\ITarget.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Mind.ITestCondition" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\SkillModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Mind.ITestResult" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\SkillModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Mind.ISkillTest" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\SkillModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Weaver.Heroes.Mind.CombatStep" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAEAAAAAAgABAAAAAAEAAIAEACAAA=</HashCode>
+      <FileName>Heroes\Mind\CombatStep.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Weaver.Heroes.Mind.TargetType" Collapsed="true">
+    <Position X="2.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAEAAAAAAAAAAAAAAEAAAAACAAA=</HashCode>
+      <FileName>Heroes\Mind\TargetType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Weaver.Heroes.Mind.CombatStepEventHandler">
+    <Position X="0.5" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAQAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Mind\CombatStep.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

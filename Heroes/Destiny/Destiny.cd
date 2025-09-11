@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Weaver.Heroes.Destiny.Parser.Parser" Collapsed="true">
+    <Position X="22.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAYAAAAAAQAAJAAAAAABAAAIAAAEAAAAAAQAAAA=</HashCode>
+      <FileName>Heroes\Destiny\Parser\ConditionParserCustom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.And" Collapsed="true">
+    <Position X="16" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\BoolOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.Or" Collapsed="true">
+    <Position X="18.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\BoolOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.ComparableReference&lt;T&gt;" Collapsed="true">
+    <Position X="11.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparableReference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.PrimitiveReader&lt;T&gt;" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparableReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.RollReader" Collapsed="true">
+    <Position X="6.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparableReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.ValueModuleReader&lt;T&gt;" Collapsed="true">
+    <Position X="11.25" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAEAAAAQAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparableReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.ModuleReference" Collapsed="true">
+    <Position X="24.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparableReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.Equality&lt;T&gt;" Collapsed="true">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparisonOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.Inequality&lt;T&gt;" Collapsed="true">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparisonOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.Greater&lt;T&gt;" Collapsed="true">
+    <Position X="2" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparisonOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.GreaterOrEqual&lt;T&gt;" Collapsed="true">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparisonOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.Lower&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparisonOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.LowerOrEqual&lt;T&gt;" Collapsed="true">
+    <Position X="8.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\ComparisonOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.Condition" Collapsed="true">
+    <Position X="15.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\Condition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.Flag" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ICondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.Not" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAQAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ICondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.RefCondition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAQAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ICondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.LogicOperator" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAACBCAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\ICondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.ComparisonOperator&lt;T&gt;" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAgAAAAAAAAQAAAAAQAACBCAAAAAIAA=</HashCode>
+      <FileName>Heroes\Destiny\ICondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.MathOperator&lt;T&gt;" Collapsed="true">
+    <Position X="17" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAACAA=</HashCode>
+      <FileName>Heroes\Destiny\MathOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.ReferenceOperator" Collapsed="true">
+    <Position X="4.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAACAA=</HashCode>
+      <FileName>Heroes\Destiny\MathOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.NegativeOperator" Collapsed="true">
+    <Position X="9" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAACAA=</HashCode>
+      <FileName>Heroes\Destiny\MathOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.AddOperator" Collapsed="true">
+    <Position X="13.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\MathOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.SubOperator" Collapsed="true">
+    <Position X="15.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\MathOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.MulOperator" Collapsed="true">
+    <Position X="18" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\MathOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Destiny.DivOperator" Collapsed="true">
+    <Position X="20.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\MathOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Weaver.Heroes.Destiny.Parser.ValueType" Collapsed="true">
+    <Position X="24.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAABAAAAAAAAAAAAAAAAAAAAJAAgAAAIA=</HashCode>
+      <FileName>Heroes\Destiny\Parser\ConditionParserGenerated.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Weaver.Heroes.Destiny.ICondition" Collapsed="true">
+    <Position X="13.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\ICondition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Weaver.Heroes.Destiny.Parser.Tokens" Collapsed="true">
+    <Position X="22.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAEgAAAAAAABAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Destiny\Parser\ConditionParserGenerated.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

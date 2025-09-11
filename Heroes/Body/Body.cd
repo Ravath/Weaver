@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Weaver.Heroes.Body.Modification.ModificationAggregate&lt;M&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAJAAAAAAAAAAAQAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Heroes\Body\Modification\ModificationAggregate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Modification.ModificationCollectionModule&lt;M&gt;" Collapsed="true">
+    <Position X="16.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Modification\ModificationCollectionModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Value.Modifier.IntModifier">
+    <Position X="33" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAgAggAAAAAAAAAABA=</HashCode>
+      <FileName>Heroes\Body\Value\Modifier\IntModifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Value.Modifier.ModifierManager&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CIAIBAABAAIAAAAAAAAABAAAEAAAAAAAAAAABAAACAA=</HashCode>
+      <FileName>Heroes\Body\Value\Modifier\ModifierManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Value.Modifier.RefModifier&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAAAAAAAAAEAAAAAAAAAAAAAIEAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\Modifier\RefModifier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Value.IndirectValueModule&lt;T&gt;" Collapsed="true">
+    <Position X="25.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AJAABCABEAIAAAAEAAAABAAAEAAAAAEAAACgAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\IndirectValueModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Value.SimpleValueModule&lt;T&gt;" Collapsed="true">
+    <Position X="14.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAEAAAAAAEAAAAAAAAAAAAAAEAAAAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\SimpleValueModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Value.ThresholdModule&lt;T&gt;" Collapsed="true">
+    <Position X="21.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEgAEAAAAAQAAQAAEABAAIAAAAEgAgAAEAAAAAE=</HashCode>
+      <FileName>Heroes\Body\Value\ThresholdModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Value.ValueModule&lt;T&gt;" Collapsed="true">
+    <Position X="21.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AJAABCABEAIAAAAEAAAABAAAEAAAAAEAAAAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\ValueModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Body.CollectionModule&lt;T&gt;" Collapsed="true">
+    <Position X="17.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAQEAAAAAABIAAAAAAABAAAAAAAABAAAA=</HashCode>
+      <FileName>Heroes\Body\CollectionModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Body.AndCondition&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEAAAA=</HashCode>
+      <FileName>Heroes\Body\IConditionChecker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Body.DefaultAttributeChecker&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAgACBCAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\IConditionChecker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weaver.Heroes.Body.Module" Collapsed="true">
+    <Position X="20.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAwAAAAAAAAAAFAAQAIAAAABQAACABYgAAAAEAA=</HashCode>
+      <FileName>Heroes\Body\Module.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Body.ModuleCollectionModule&lt;T&gt;" Collapsed="true">
+    <Position X="19" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAABIAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\ModuleCollectionModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weaver.Heroes.Body.ProviderModule" Collapsed="true">
+    <Position X="23.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAEAAAAAAEAAAAAAAAAAAAgAEAAABgAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\ProviderModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Weaver.Heroes.Body.Modification.IModuleModification&lt;M&gt;" Collapsed="true">
+    <Position X="30.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Modification\IModuleModification.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Body.Value.Modifier.IModifiable&lt;T&gt;" Collapsed="true">
+    <Position X="18.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAABAAAAAIAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\Modifier\IModifiable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Body.Value.Modifier.IModifiableValue&lt;T&gt;" Collapsed="true">
+    <Position X="15.5" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\Modifier\IModifiable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Body.Value.Modifier.IModifier&lt;T&gt;" Collapsed="true">
+    <Position X="28.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\Modifier\IModifier.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Body.Value.Modifier.IBaseValue&lt;T&gt;" Collapsed="true">
+    <Position X="15.5" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\Modifier\ModifierManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Body.IConditionChecker&lt;T&gt;" Collapsed="true">
+    <Position X="24" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\IConditionChecker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Weaver.Heroes.Body.IValue&lt;T&gt;" Collapsed="true">
+    <Position X="15.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\IValue.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Weaver.Heroes.Body.Value.ThresholdCrossingState">
+    <Position X="21.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAQAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\ThresholdModule.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Weaver.Heroes.Body.ConditionOperation">
+    <Position X="24" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Heroes\Body\IConditionChecker.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Weaver.Heroes.Body.Value.Modifier.DelegateModifierHandler&lt;T&gt;" Collapsed="true">
+    <Position X="28.5" Y="8.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\Modifier\RefModifier.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Weaver.Heroes.Body.Value.ThresholdCrossingEvent&lt;T&gt;" Collapsed="true">
+    <Position X="28.5" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\Value\ThresholdModule.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Weaver.Heroes.Body.CheckCondition&lt;T&gt;" Collapsed="true">
+    <Position X="28.5" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\CollectionModule.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Weaver.Heroes.Body.ModuleChanged&lt;T&gt;" Collapsed="true">
+    <Position X="28.5" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\CollectionModule.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Weaver.Heroes.Body.ValueChangedHandler&lt;T&gt;" Collapsed="true">
+    <Position X="28.5" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Heroes\Body\IValue.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

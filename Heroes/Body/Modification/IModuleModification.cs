@@ -17,9 +17,9 @@ namespace Weaver.Heroes.Body.Modification;
 /// </para>
 /// </summary>
 /// <typeparam name="M"></typeparam>
-public interface IModuleModification<M> where M : Module
+public interface IModuleModification<M>
 {
-    bool CanApply(M module);
-    void ApplyModification(M module);
-    void RemoveModification(M module);
+    bool CanApply(M target);
+    void ApplyModification(M target);
+    void RemoveModification(M target);
 }

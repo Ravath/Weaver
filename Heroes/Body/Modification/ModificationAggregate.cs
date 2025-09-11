@@ -12,7 +12,7 @@ namespace Weaver.Heroes.Body.Modification;
 /// </para>
 /// </summary>
 /// <typeparam name="M"></typeparam>
-public class ModificationAggregate<M> : IModuleModification<M> where M : Module
+public class ModificationAggregate<M> : IModuleModification<M>
 {
     /// <summary>
     /// The stored modifiers.
@@ -22,38 +22,38 @@ public class ModificationAggregate<M> : IModuleModification<M> where M : Module
     /// <summary>
     /// A delegate for personalising adding conditions.
     /// </summary>
-    public CheckCondition<Module>? AddCheck;
+    public CheckCondition<M>? AddCheck;
 
     public ModificationAggregate(params IModuleModification<M>[] modifiers)
     {
         _modifiers.AddRange(modifiers);
     }
 
-    public bool CanApply(M module)
+    public bool CanApply(M target)
     {
         foreach(IModuleModification<M> modifier in _modifiers)
         {
-            if(!modifier.CanApply(module))
+            if(!modifier.CanApply(target))
                 return false;
         }
         if(AddCheck != null)
-            return AddCheck(module);
+            return AddCheck(target);
         return true;
     }
 
-    public void ApplyModification(M module)
+    public void ApplyModification(M target)
     {
         foreach(IModuleModification<M> modifier in _modifiers)
         {
-            modifier.ApplyModification(module);
+            modifier.ApplyModification(target);
         }
     }
 
-    public void RemoveModification(M module)
+    public void RemoveModification(M target)
     {
         foreach(IModuleModification<M> modifier in _modifiers)
         {
-            modifier.RemoveModification(module);
+            modifier.RemoveModification(target);
         }
     }
 }
