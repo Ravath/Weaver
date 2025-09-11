@@ -6,10 +6,15 @@ using System.Text.Json.Serialization;
 namespace Weaver.Tales;
 
 /// <summary>
+<<<<<<< HEAD
 /// A Story narrative structure.
 /// Stores and manages every paragraphs from the story.
 /// The story is structured as a graph, and can be used to implement multiple-choice narratives.
 /// The entry point depends on implementation, by it is generally the first paragraph from the list.
+=======
+/// The entry point of a Story narrative structure.
+/// The story is structured as a graph, and can be used to implement multiple-choice narratives.
+>>>>>>> 43df54ed5a35f1b43c61d4f901108e1a8f0998ae
 /// </summary>
 public class Story
 {
@@ -29,12 +34,20 @@ public class Story
     // TODO Combat system, default character sheet and character creation
 
     /// <summary>
+<<<<<<< HEAD
     /// The complete list of the paragraphs.
+=======
+    /// The complete list of the direct children paragraphs.
+>>>>>>> 43df54ed5a35f1b43c61d4f901108e1a8f0998ae
     /// </summary>
     public IEnumerable<StoryParagraph> Paragraphs { get { return _paragraphs; } }
 
     /// <summary>
+<<<<<<< HEAD
     /// Add a paragraph to the story. Uses the paragraph's Label as a key.
+=======
+    /// Add a paragraph child as a story entry point. Uses the paragraph's Label as a key.
+>>>>>>> 43df54ed5a35f1b43c61d4f901108e1a8f0998ae
     /// </summary>
     /// <param name="chunk"></param>
     public void AddChunk(StoryParagraph chunk)
@@ -44,7 +57,11 @@ public class Story
     }
 
     /// <summary>
+<<<<<<< HEAD
     /// Checks if the given string is the key of an existing paragraph.
+=======
+    /// Checks if the given string if the key of a direct paragraph child.
+>>>>>>> 43df54ed5a35f1b43c61d4f901108e1a8f0998ae
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
@@ -54,7 +71,11 @@ public class Story
     }
 
     /// <summary>
+<<<<<<< HEAD
     /// Get the paragraph identified by the given key.
+=======
+    /// Get the direct child paragraph identified by the given key.
+>>>>>>> 43df54ed5a35f1b43c61d4f901108e1a8f0998ae
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
